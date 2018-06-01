@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         et3 = findViewById(R.id.et3)
         et4 = findViewById(R.id.et4)
         et5 = findViewById(R.id.et5)
-        
+
     }
 
     fun sendSMS(v:View){
@@ -57,7 +57,9 @@ class MainActivity : AppCompatActivity() {
     }
     fun javaMail(v:View)
     {
-
+            var task = LongOperation(et3?.text.toString(),
+                 et4?.text.toString(),et5?.text.toString())
+            task.execute( )
     }
     fun sendMail(v:View)
     {
